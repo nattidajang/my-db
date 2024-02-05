@@ -1,0 +1,19 @@
+{
+  "compact": false,
+  "retainLines": true,
+  "minified": false,
+  "inputSourceMap": false,
+  "sourceMaps": false,
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./build"],
+        "alias": {
+          "@question-bank-db": "./build/question-bank-db/src",
+          "@shared": "./build/shared/src"
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,88 @@
+// {
+//     "parser": "@typescript-eslint/parser",
+//     "extends": [
+//       "node",
+//       "plugin:@typescript-eslint/recommended",
+//       "prettier",
+//       "prettier/@typescript-eslint",
+//       "plugin:prettier/recommended"
+//     ],
+//     "plugins": ["@typescript-eslint", "simple-import-sort"],
+//     "settings": {
+//       "import/resolver": {
+//         "typescript": {}
+//       }
+//     },
+//     "parserOptions": {
+//       "ecmaVersion": 2018,
+//       "sourceType": "module"
+//     },
+//     "rules": {
+//       "class-methods-use-this": "off",
+//       "no-console": "error",
+//       "no-useless-constructor": "off",
+//       "import/first": "error",
+//       "import/newline-after-import": "error",
+//       "import/no-duplicates": "error",
+//       "import/no-namespace": "off",
+//       "import/order": "off",
+//       "import/prefer-default-export": "off",
+//       "simple-import-sort/sort": [
+//         "error",
+//         {
+//           "groups": [
+//             [
+//               // node
+//               "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)",
+//               // other node_modules
+//               "^[^@|~|.](.*|$)",
+//               "^@\\w",
+//               // internal modules
+//               "^(@question-bank-api|@question-bank-db(/.*|$)",
+//               // absolut import
+//               "^~/\\w",
+//               // relative imports
+//               "^\\."
+//             ]
+//           ]
+//         }
+//       ],
+//       "sort-imports": "off",
+//       "@typescript-eslint/no-inferrable-types": "off",
+//       "@typescript-eslint/no-unused-vars": [
+//         "error",
+//         {
+//           "argsIgnorePattern": "^_",
+//           "varsIgnorePattern": "^_"
+//         }
+//       ],
+//       "@typescript-eslint/explicit-module-boundary-types": "off"
+//     }
+//   }
+  
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "class-methods-use-this": "off",
+    "no-console": "error",
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}
